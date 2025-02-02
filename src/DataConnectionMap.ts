@@ -1,4 +1,4 @@
-export type Db<T = unknown> = {
+export type DbStore<T = unknown> = {
   dbName: string;
   storeName: string;
 };
@@ -8,7 +8,7 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        db: Db<T>;
+        dbStore: DbStore<T>;
         key: IDBValidKey;
         value: T;
       };
@@ -23,7 +23,7 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        db: Db<T>;
+        dbStore: DbStore<T>;
         key: IDBValidKey;
         value: T;
       };
@@ -38,7 +38,7 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        db: Db<T>;
+        dbStore: DbStore<T>;
         key: IDBValidKey;
       };
     };
@@ -52,7 +52,7 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        db: Db<T>;
+        dbStore: DbStore<T>;
         query?: IDBValidKey | IDBKeyRange | null;
         count?: number;
       };
@@ -67,7 +67,7 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        db: Db<T>;
+        dbStore: DbStore<T>;
         query: IDBValidKey | IDBKeyRange;
       };
     };
