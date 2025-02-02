@@ -4,21 +4,6 @@ export type DbStore<T = unknown> = {
 };
 
 export type DataConnectionMap<T = unknown> = {
-  "data.add": {
-    request: {
-      options?: Partial<{}>;
-      body: {
-        dbStore: DbStore<T>;
-        key: IDBValidKey;
-        value: T;
-      };
-    };
-    response: IDBValidKey;
-    headers: {
-      url?: string;
-      authToken?: string;
-    };
-  };
   "data.put": {
     request: {
       options?: Partial<{}>;
@@ -53,7 +38,7 @@ export type DataConnectionMap<T = unknown> = {
       options?: Partial<{}>;
       body: {
         dbStore: DbStore<T>;
-        query?: IDBValidKey | IDBKeyRange | null;
+        query?: IDBValidKey | null;
         count?: number;
       };
     };
@@ -68,7 +53,7 @@ export type DataConnectionMap<T = unknown> = {
       options?: Partial<{}>;
       body: {
         dbStore: DbStore<T>;
-        query: IDBValidKey | IDBKeyRange;
+        query: IDBValidKey;
       };
     };
     response: { success: boolean };
