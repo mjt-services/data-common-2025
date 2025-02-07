@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-02-07
+- added Ids util ([443cc6e](https://github.com/mjt-services/data-common-2025/commit/443cc6e9b5e16faec33f45a5271c2c424e23b44c)) by Matt Taylor
+
 ## 2025-02-02
 - remove IDBKeyRange, and remove the data.add since redundant ([dd69f0d](https://github.com/mjt-services/data-common-2025/commit/dd69f0d8fd7fa0a9fafe6ef404c1015e961458b3)) by Matt Taylor
 - Db -> DbStore rename ([5ebb2cb](https://github.com/mjt-services/data-common-2025/commit/5ebb2cb2777e1104f54e77897718177e9f860b2a)) by Matt Taylor
