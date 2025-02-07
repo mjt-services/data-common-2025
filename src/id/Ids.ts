@@ -1,19 +1,19 @@
 export const from = (
   type: string = "id",
-  uuid = crypto.randomUUID(),
-  timestamp = `${Date.now()}`
+  unique = crypto.randomUUID(),
+  timestamp = `${Date.now()}`,
+  separator = ":"
 ) => {
-  return `${type}-${timestamp}-${uuid}`;
+  return `${type}${separator}${timestamp}${separator}${unique}`;
 };
 
-export const parse = (id: string) => {
-  const regex =
-    /^(.+)-(\d+)-([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$/;
+export const parse = (id: string, separator = ":") => {
+  const regex = new RegExp(`^(.+)${separator}(\\d+)${separator}(.+)$`);
   const match = id.match(regex);
 
   if (match) {
-    const [type, timestamp, uuid] = match;
-    return { type, timestamp, uuid };
+    const [_, type, timestamp, unique] = match;
+    return { type, timestamp, unique };
   } else {
     return undefined;
   }
