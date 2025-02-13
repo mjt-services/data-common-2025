@@ -1,6 +1,13 @@
-export type DbStore<T = unknown> = {
-  dbName: string;
-  storeName: string;
+export type ObjectStore<T = unknown> = {
+  namespace: string;
+  store: string;
+};
+
+export type DataQuery = {
+  from: ObjectStore | ObjectStore[]; // object type(s)
+  query?: string; // JMESPath query
+  to?: ObjectStore; // optional object type of result (query MUST return an array of IDs)
+  next?: DataQuery; // optional next query to chain from the result of this query
 };
 
 export type DataConnectionMap<T = unknown> = {
@@ -8,12 +15,12 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        dbStore: DbStore<T>;
-        key: IDBValidKey;
+        dbStore: ObjectStore<T>;
+        key: string;
         value: T;
       };
     };
-    response: IDBValidKey;
+    response: string;
     headers: {
       url?: string;
       authToken?: string;
@@ -23,8 +30,8 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        dbStore: DbStore<T>;
-        key: IDBValidKey;
+        dbStore: ObjectStore<T>;
+        key: string;
       };
     };
     response: T | undefined;
@@ -33,16 +40,12 @@ export type DataConnectionMap<T = unknown> = {
       authToken?: string;
     };
   };
-  "data.list": {
+  "data.search": {
     request: {
       options?: Partial<{}>;
-      body: {
-        dbStore: DbStore<T>;
-        query?: IDBValidKey | null;
-        count?: number;
-      };
+      body: DataQuery;
     };
-    response: IDBValidKey[];
+    response: T[];
     headers: {
       url?: string;
       authToken?: string;
@@ -52,8 +55,8 @@ export type DataConnectionMap<T = unknown> = {
     request: {
       options?: Partial<{}>;
       body: {
-        dbStore: DbStore<T>;
-        query: IDBValidKey;
+        dbStore: ObjectStore<T>;
+        query: string | string[] | DataQuery;
       };
     };
     response: { success: boolean };
