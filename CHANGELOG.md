@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-02-13
+- rework of data operations, introduction of ObjectStore, and DataQuery ([c0952bc](https://github.com/mjt-services/data-common-2025/commit/c0952bc481b9651f51cad727a491b97cf439bc49)) by Matt Taylor
+
 ## 2025-02-07
 - update Ids to be more flexible and accomidating of future decisions ([5e529e6](https://github.com/mjt-services/data-common-2025/commit/5e529e642e4ef645175652fba8283439cda4bb14)) by Matt Taylor
 - added Ids util ([443cc6e](https://github.com/mjt-services/data-common-2025/commit/443cc6e9b5e16faec33f45a5271c2c424e23b44c)) by Matt Taylor
