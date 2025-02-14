@@ -48,7 +48,7 @@ export type DataConnectionMap<T = unknown> = {
             options?: Partial<{}>;
             body: FromObjectStoreDataQuery;
         };
-        response: T[];
+        response: unknown;
         headers: {
             url?: string;
             authToken?: string;

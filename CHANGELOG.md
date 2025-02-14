@@ -2,6 +2,7 @@
 
 
 ## 2025-02-14
+- response unknown on data.search, some problems have definite and unknown solutions ([ee50910](https://github.com/mjt-services/data-common-2025/commit/ee50910a9570d34b38e89dc0e82272318291f9a1)) by Matt Taylor
 - rework of DataQuery type to have multiple from props ([0c1ff8d](https://github.com/mjt-services/data-common-2025/commit/0c1ff8da66df1e783725b60b26d51d2b4e2568cc)) by Matt Taylor
 
 ## 2025-02-13
