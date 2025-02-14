@@ -59,7 +59,7 @@ export type DataConnectionMap<T = unknown> = {
             options?: Partial<{}>;
             body: {
                 dbStore: ObjectStore<T>;
-                query: string | string[] | DataQuery;
+                query: string | string[] | FromObjectStoreDataQuery;
             };
         };
         response: {
