@@ -1,10 +1,18 @@
+import type { ObjectStore } from "../DataConnectionMap";
+
 export const from = (
-  type: string = "id",
+  type = "",
+  namespace = "",
   unique = crypto.randomUUID(),
   timestamp = `${Date.now()}`,
   separator = ":"
 ) => {
-  return `${type}${separator}${timestamp}${separator}${unique}`;
+  return `${namespace}${separator}${type}${separator}${timestamp}${separator}${unique}`;
+};
+
+export const fromObjectStore = (objectStore: ObjectStore) => {
+  const { namespace, store } = objectStore;
+  return from(store, namespace);
 };
 
 export const parse = (id: string, separator = ":") => {
@@ -12,11 +20,20 @@ export const parse = (id: string, separator = ":") => {
   const match = id.match(regex);
 
   if (match) {
-    const [_, type, timestamp, unique] = match;
-    return { type, timestamp, unique };
+    const [_, namespace, type, timestamp, unique] = match;
+    return { namespace, type, timestamp, unique };
   } else {
     return undefined;
   }
 };
 
-export const Ids = { from, parse };
+export const toObjectStore = (id: string) => {
+  const parsed = parse(id);
+  if (!parsed) {
+    return undefined;
+  }
+  const { namespace, type } = parsed;
+  return { namespace, store: type };
+};
+
+export const Ids = { from, parse, fromObjectStore, toObjectStore };
