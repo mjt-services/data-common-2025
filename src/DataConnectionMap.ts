@@ -4,10 +4,17 @@ export type ObjectStore<T = unknown> = {
 };
 
 export type DataQuery = {
-  from: ObjectStore | ObjectStore[]; // object type(s)
   query?: string; // JMESPath query
   to?: ObjectStore; // optional object type of result (query MUST return an array of IDs)
   next?: DataQuery; // optional next query to chain from the result of this query
+};
+
+export type FromObjectStoreDataQuery = DataQuery & {
+  from: ObjectStore | ObjectStore[];
+};
+
+export type FromUnknownDataQuery = DataQuery & {
+  from: unknown;
 };
 
 export type DataConnectionMap<T = unknown> = {
@@ -43,7 +50,7 @@ export type DataConnectionMap<T = unknown> = {
   "data.search": {
     request: {
       options?: Partial<{}>;
-      body: DataQuery;
+      body: FromObjectStoreDataQuery;
     };
     response: T[];
     headers: {
