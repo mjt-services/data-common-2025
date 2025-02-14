@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-02-14
+- rework of DataQuery type to have multiple from props ([0c1ff8d](https://github.com/mjt-services/data-common-2025/commit/0c1ff8da66df1e783725b60b26d51d2b4e2568cc)) by Matt Taylor
+
 ## 2025-02-13
 - rework of data operations, introduction of ObjectStore, and DataQuery ([c0952bc](https://github.com/mjt-services/data-common-2025/commit/c0952bc481b9651f51cad727a491b97cf439bc49)) by Matt Taylor
 

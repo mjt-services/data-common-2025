@@ -3,10 +3,15 @@ export type ObjectStore<T = unknown> = {
     store: string;
 };
 export type DataQuery = {
-    from: ObjectStore | ObjectStore[];
     query?: string;
     to?: ObjectStore;
     next?: DataQuery;
+};
+export type FromObjectStoreDataQuery = DataQuery & {
+    from: ObjectStore | ObjectStore[];
+};
+export type FromUnknownDataQuery = DataQuery & {
+    from: unknown;
 };
 export type DataConnectionMap<T = unknown> = {
     "data.put": {
@@ -41,7 +46,7 @@ export type DataConnectionMap<T = unknown> = {
     "data.search": {
         request: {
             options?: Partial<{}>;
-            body: DataQuery;
+            body: FromObjectStoreDataQuery;
         };
         response: T[];
         headers: {
