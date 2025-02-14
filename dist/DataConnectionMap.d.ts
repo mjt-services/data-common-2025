@@ -1,5 +1,5 @@
 export type ObjectStore<T = unknown> = {
-    namespace: string;
+    namespace?: string;
     store: string;
 };
 export type DataQuery = {

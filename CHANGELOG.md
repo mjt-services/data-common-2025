@@ -2,6 +2,7 @@
 
 
 ## 2025-02-14
+- namespace is optional for object-store ([2627b17](https://github.com/mjt-services/data-common-2025/commit/2627b172742f1c141c7d61e05ab389668b9e0b49)) by Matt Taylor
 - rework of ID to include namespace and functions from/to object-store ([b100cf3](https://github.com/mjt-services/data-common-2025/commit/b100cf3be8ca1fb7ab32027ad192cf1f19607c86)) by Matt Taylor
 - key->keys on getMany ([3548db2](https://github.com/mjt-services/data-common-2025/commit/3548db23bcb17d1b9ed8ccfece83578fd2415888)) by Matt Taylor
 - dbStore->objectStore and add getMany operation ([7c9dbe2](https://github.com/mjt-services/data-common-2025/commit/7c9dbe273f18993fa0bc48e19e34b8c3a62fbe79)) by Matt Taylor
