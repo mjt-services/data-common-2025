@@ -18,8 +18,8 @@ export type DataConnectionMap<T = unknown> = {
         request: {
             options?: Partial<{}>;
             body: {
-                objectStore: ObjectStore<T>;
-                key: string;
+                objectStore?: ObjectStore<T>;
+                key?: string;
                 value: T;
             };
         };
@@ -33,7 +33,7 @@ export type DataConnectionMap<T = unknown> = {
         request: {
             options?: Partial<{}>;
             body: {
-                objectStore: ObjectStore<T>;
+                objectStore?: ObjectStore<T>;
                 key: string;
             };
         };
@@ -47,7 +47,7 @@ export type DataConnectionMap<T = unknown> = {
         request: {
             options?: Partial<{}>;
             body: {
-                objectStore: ObjectStore<T>;
+                objectStore?: ObjectStore<T>;
                 keys: string[];
             };
         };
@@ -72,7 +72,7 @@ export type DataConnectionMap<T = unknown> = {
         request: {
             options?: Partial<{}>;
             body: {
-                objectStore: ObjectStore<T>;
+                objectStore?: ObjectStore<T>;
                 query: string | string[] | FromObjectStoreDataQuery;
             };
         };
