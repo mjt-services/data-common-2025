@@ -2,6 +2,7 @@
 
 
 ## 2025-02-14
+- key->keys on getMany ([3548db2](https://github.com/mjt-services/data-common-2025/commit/3548db23bcb17d1b9ed8ccfece83578fd2415888)) by Matt Taylor
 - dbStore->objectStore and add getMany operation ([7c9dbe2](https://github.com/mjt-services/data-common-2025/commit/7c9dbe273f18993fa0bc48e19e34b8c3a62fbe79)) by Matt Taylor
 - remove by from-object-store data-query ([46a1603](https://github.com/mjt-services/data-common-2025/commit/46a160382f14b1312c173648a435e8f6422fa2b5)) by Matt Taylor
 - response unknown on data.search, some problems have definite and unknown solutions ([ee50910](https://github.com/mjt-services/data-common-2025/commit/ee50910a9570d34b38e89dc0e82272318291f9a1)) by Matt Taylor

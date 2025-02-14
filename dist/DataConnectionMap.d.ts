@@ -48,7 +48,7 @@ export type DataConnectionMap<T = unknown> = {
             options?: Partial<{}>;
             body: {
                 objectStore: ObjectStore<T>;
-                key: string[];
+                keys: string[];
             };
         };
         response: T[] | undefined;
