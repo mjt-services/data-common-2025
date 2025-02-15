@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-02-15
+- fix id parser ([0d7be43](https://github.com/mjt-services/data-common-2025/commit/0d7be435308e34f30941e69a37b2425eeb5d9693)) by Matt Taylor
+
 ## 2025-02-14
 - objectstore optional for operations (determine via ID) ([7982838](https://github.com/mjt-services/data-common-2025/commit/79828385b33c9168c5165911156b951b40aaf1ce)) by Matt Taylor
 - namespace is optional for object-store ([2627b17](https://github.com/mjt-services/data-common-2025/commit/2627b172742f1c141c7d61e05ab389668b9e0b49)) by Matt Taylor

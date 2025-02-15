@@ -6,15 +6,13 @@ export const fromObjectStore = (objectStore) => {
     return from(store, namespace);
 };
 export const parse = (id, separator = ":") => {
-    const regex = new RegExp(`^(.+)${separator}(\\d+)${separator}(.+)$`);
-    const match = id.match(regex);
-    if (match) {
-        const [_, namespace, type, timestamp, unique] = match;
-        return { namespace, type, timestamp, unique };
+    const parts = id.split(separator);
+    if (parts.length < 4) {
+        return undefined; // Ensure we have at least 4 parts
     }
-    else {
-        return undefined;
-    }
+    const [namespace, type, timestamp, ...uniqueParts] = parts;
+    const unique = uniqueParts.join(separator); // Reconstruct the unique part
+    return { namespace, type, timestamp, unique };
 };
 export const toObjectStore = (id) => {
     const parsed = parse(id);
