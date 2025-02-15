@@ -16,15 +16,16 @@ export const fromObjectStore = (objectStore: ObjectStore) => {
 };
 
 export const parse = (id: string, separator = ":") => {
-  const regex = new RegExp(`^(.+)${separator}(\\d+)${separator}(.+)$`);
-  const match = id.match(regex);
+  const parts = id.split(separator);
 
-  if (match) {
-    const [_, namespace, type, timestamp, unique] = match;
-    return { namespace, type, timestamp, unique };
-  } else {
-    return undefined;
+  if (parts.length < 4) {
+    return undefined; // Ensure we have at least 4 parts
   }
+
+  const [namespace, type, timestamp, ...uniqueParts] = parts;
+  const unique = uniqueParts.join(separator); // Reconstruct the unique part
+
+  return { namespace, type, timestamp, unique };
 };
 
 export const toObjectStore = (id: string) => {
