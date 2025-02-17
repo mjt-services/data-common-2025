@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 2025-02-17
+- added getMany helper ([b6af16b](https://github.com/mjt-services/data-common-2025/commit/b6af16b0d70cb272d1781283c2ae9af777eba1a5)) by Matt Taylor
+- added dep on mjt-engine/message, and introduced the Datas helper ([3886d5c](https://github.com/mjt-services/data-common-2025/commit/3886d5c9cd4203149eac7ef47b2556dfac5acd35)) by Matt Taylor
+
 ## 2025-02-15
 - fix id parser ([0d7be43](https://github.com/mjt-services/data-common-2025/commit/0d7be435308e34f30941e69a37b2425eeb5d9693)) by Matt Taylor
 
