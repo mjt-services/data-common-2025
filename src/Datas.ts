@@ -15,6 +15,17 @@ export const get =
     >;
   };
 
+export const getMany =
+  (con: DataConnection) =>
+  async <T = unknown>(
+    body: DataConnectionMap["data.getMany"]["request"]["body"]
+  ) => {
+    return con.request({
+      subject: "data.getMany",
+      request: { body },
+    }) as Promise<T[]>;
+  };
+
 export const put =
   (con: DataConnection) =>
   async (body: DataConnectionMap["data.put"]["request"]["body"]) => {
@@ -33,4 +44,4 @@ export const remove =
     return con.request({ subject: "data.remove", request: { body } });
   };
 
-export const Datas = { put, get, search, remove };
+export const Datas = { put, get, getMany, search, remove };
