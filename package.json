@@ -1,6 +1,6 @@
 {
   "name": "@mjt-services/data-common-2025",
-  "version": "2025.2.17-1357",
+  "version": "2025.2.20-1227",
   "sideEffects": false,
   "description": "data common",
   "main": "./dist/index.js",
