@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-02-21
+- bump mjt-engine/message ([7aa8926](https://github.com/mjt-services/data-common-2025/commit/7aa8926b35f7d797466fc420652d86b40337a953)) by Matt Taylor
+
 ## 2025-02-20
 - add generic Link type ([84241bd](https://github.com/mjt-services/data-common-2025/commit/84241bd664874af21bafa8de5fe8c6e62547d282)) by Matt Taylor
 
