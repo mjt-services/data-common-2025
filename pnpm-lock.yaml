@@ -11,6 +11,9 @@ importers:
       '@mjt-engine/message':
         specifier: github:mjt-engine/message
         version: https://codeload.github.com/mjt-engine/message/tar.gz/34cd106e41b1b6294490356d52e9e151825c281c(nats.ws@1.30.2)
+      '@mjt-engine/object':
+        specifier: github:mjt-engine/object
+        version: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
     devDependencies:
       typedoc:
         specifier: ^0.27.8

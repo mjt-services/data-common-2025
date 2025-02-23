@@ -1,3 +1,4 @@
+import { isDefined } from "@mjt-engine/object";
 
 export type ChildObject = {
   parentId: string;
@@ -5,5 +6,5 @@ export type ChildObject = {
 
 export const isChildObject = (maybe: unknown): maybe is ChildObject => {
   const straw = maybe as ChildObject;
-  return typeof straw === "object" && straw !== null && "parentId" in straw;
+  return typeof straw === "object" && isDefined(straw.parentId);
 };
