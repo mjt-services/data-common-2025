@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-02-23
+- add DATA_EVENT_MAP and UpdteSubject ([ae252cf](https://github.com/mjt-services/data-common-2025/commit/ae252cf0a3e585a31880f26571b26b283edd0593)) by Matt Taylor
+
 ## 2025-02-21
 - bump mjt-engine/message ([7aa8926](https://github.com/mjt-services/data-common-2025/commit/7aa8926b35f7d797466fc420652d86b40337a953)) by Matt Taylor
 
