@@ -2,6 +2,7 @@
 
 
 ## 2025-02-23
+- stronger test of parentId on ChildObject typeguard ([3d32a1a](https://github.com/mjt-services/data-common-2025/commit/3d32a1adb2f1607a10a3f0aa879f0baea06912db)) by Matt Taylor
 - add ChildObject type ([87f3eef](https://github.com/mjt-services/data-common-2025/commit/87f3eef239214ddf4f1aa2d71c5ffcc5d55379a2)) by Matt Taylor
 - add DATA_EVENT_MAP and UpdteSubject ([ae252cf](https://github.com/mjt-services/data-common-2025/commit/ae252cf0a3e585a31880f26571b26b283edd0593)) by Matt Taylor
 
