@@ -1,4 +1,4 @@
-import type { ObjectStore } from "./DataConnectionMap";
+import type { ObjectStore } from "../DataConnectionMap";
 
 export type Link<T extends Record<string, string> = {}> = {
   id: string;
