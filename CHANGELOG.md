@@ -2,6 +2,7 @@
 
 
 ## 2025-03-03
+- added Entity as possible payload type for events ([ac17d65](https://github.com/mjt-services/data-common-2025/commit/ac17d652e601126a5528071637d43d9fc7da2d06)) by Matt Taylor
 - added Entity type ([8832ab3](https://github.com/mjt-services/data-common-2025/commit/8832ab382148f5c369db1774fcd9e41ad99339b3)) by Matt Taylor
 - add child and object update events ([0993792](https://github.com/mjt-services/data-common-2025/commit/09937929cf5218c682a7c9d01afd9eac40a377f5)) by Matt Taylor
 
