@@ -4,9 +4,11 @@ import {
   type ObjectUpdateSubject,
   type UpdateSubject,
 } from "./UpdateSubject";
+import type { Entity } from "../type/Entity";
 
 export const DATA_EVENT_MAP: EventMap<
-  UpdateSubject | ObjectUpdateSubject | ChildUpdateSubject
+  UpdateSubject | ObjectUpdateSubject | ChildUpdateSubject,
+  undefined | Entity
 > = {
   update: undefined,
   object_update: undefined,
