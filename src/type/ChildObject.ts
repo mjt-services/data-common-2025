@@ -8,3 +8,5 @@ export const isChildObject = (maybe: unknown): maybe is ChildObject => {
   const straw = maybe as ChildObject;
   return typeof straw === "object" && isDefined(straw.parentId);
 };
+
+
