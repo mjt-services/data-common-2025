@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-03-03
+- add child and object update events ([0993792](https://github.com/mjt-services/data-common-2025/commit/09937929cf5218c682a7c9d01afd9eac40a377f5)) by Matt Taylor
+
 ## 2025-02-23
 - fix types on Datas ([bbfc54a](https://github.com/mjt-services/data-common-2025/commit/bbfc54a1e2b9a608a2b067f5583e1c02cb17e475)) by Matt Taylor
 - stronger test of parentId on ChildObject typeguard ([3d32a1a](https://github.com/mjt-services/data-common-2025/commit/3d32a1adb2f1607a10a3f0aa879f0baea06912db)) by Matt Taylor
