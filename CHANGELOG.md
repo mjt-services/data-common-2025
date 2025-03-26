@@ -2,6 +2,7 @@
 
 
 ## 2025-03-26
+- reworked vector search response ([e25e041](https://github.com/mjt-services/data-common-2025/commit/e25e04182357ff93fc20ce30a43b1df7bb5424a9)) by Matt Taylor
 - query fp32array instead of number[] ([d9a25d7](https://github.com/mjt-services/data-common-2025/commit/d9a25d7b4e6d9a97aeeca0a4048f26808c7afc30)) by Matt Taylor
 - number[] ->f32array ([57e5951](https://github.com/mjt-services/data-common-2025/commit/57e5951b251fd2c79f420afcf113d5344a4b378a)) by Matt Taylor
 - added vector operations ([9220430](https://github.com/mjt-services/data-common-2025/commit/9220430b9de3cb0c88e41483be08d8b7a5aa6332)) by Matt Taylor
