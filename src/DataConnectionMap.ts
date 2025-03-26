@@ -141,9 +141,10 @@ export type DataConnectionMap<T = unknown> = {
       };
     };
     response: {
-      result: { id: number | string; score: number; payload: Payload }[];
-      time: number;
-      status: string;
+      id: number | string;
+      version: number;
+      score: number;
+      payload: Payload;
     }[];
     headers: {
       url?: string;
