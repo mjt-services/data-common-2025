@@ -84,4 +84,95 @@ export type DataConnectionMap<T = unknown> = {
             authToken?: string;
         };
     };
+    "vector.createCollection": {
+        request: {
+            options?: Partial<{}>;
+            body: {
+                size: number;
+                distance: "Dot" | "Cosine" | "Euclidean" | "Manhattan";
+                dataType: "float32" | "float16" | "uint8";
+                on_disk: boolean;
+            };
+        };
+        response: {
+            success: boolean;
+        };
+        headers: {
+            url?: string;
+            authToken?: string;
+        };
+    };
+    "vector.put": {
+        request: {
+            options?: Partial<{}>;
+            body: {
+                point: Point | Point[];
+            };
+        };
+        response: {
+            success: boolean;
+        };
+        headers: {
+            url?: string;
+            authToken?: string;
+        };
+    };
+    "vector.delete": {
+        request: {
+            options?: Partial<{}>;
+            body: {
+                point?: (string | number)[];
+                filter?: unknown;
+            };
+        };
+        response: {
+            success: boolean;
+        };
+        headers: {
+            url?: string;
+            authToken?: string;
+        };
+    };
+    "vector.search": {
+        request: {
+            options?: Partial<{}>;
+            body: {
+                query: number[];
+                filter?: unknown;
+                limit?: number;
+                scoreThreshold?: number;
+            };
+        };
+        response: {
+            result: {
+                id: number | string;
+                score: number;
+                payload: Payload;
+            }[];
+            time: number;
+            status: string;
+        }[];
+        headers: {
+            url?: string;
+            authToken?: string;
+        };
+    };
+};
+export type Point = {
+    id: number | string;
+    vector: number[];
+    payload: unknown;
+};
+export type Payload = {
+    contentId: string;
+    roomId?: string;
+    assistantId?: string;
+    userId?: string;
+    start: number;
+    end: number;
+    timestamp: number;
+    geo?: {
+        lat: number;
+        lon: number;
+    };
 };

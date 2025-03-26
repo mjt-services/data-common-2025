@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-03-26
+- added vector operations ([9220430](https://github.com/mjt-services/data-common-2025/commit/9220430b9de3cb0c88e41483be08d8b7a5aa6332)) by Matt Taylor
+
 ## 2025-03-03
 - added Entity as possible payload type for events ([ac17d65](https://github.com/mjt-services/data-common-2025/commit/ac17d652e601126a5528071637d43d9fc7da2d06)) by Matt Taylor
 - added Entity type ([8832ab3](https://github.com/mjt-services/data-common-2025/commit/8832ab382148f5c369db1774fcd9e41ad99339b3)) by Matt Taylor
