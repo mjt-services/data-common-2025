@@ -137,7 +137,7 @@ export type DataConnectionMap<T = unknown> = {
         request: {
             options?: Partial<{}>;
             body: {
-                query: number[];
+                query: Float32Array;
                 filter?: unknown;
                 limit?: number;
                 scoreThreshold?: number;
