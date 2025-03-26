@@ -154,7 +154,7 @@ export type DataConnectionMap<T = unknown> = {
 
 export type Point = {
   id: number | string; // UUID or unsigned int
-  vector: number[];
+  vector: Float32Array;
   payload: unknown;
 };
 
