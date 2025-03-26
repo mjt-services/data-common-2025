@@ -2,6 +2,7 @@
 
 
 ## 2025-03-26
+- number[] ->f32array ([57e5951](https://github.com/mjt-services/data-common-2025/commit/57e5951b251fd2c79f420afcf113d5344a4b378a)) by Matt Taylor
 - added vector operations ([9220430](https://github.com/mjt-services/data-common-2025/commit/9220430b9de3cb0c88e41483be08d8b7a5aa6332)) by Matt Taylor
 
 ## 2025-03-03

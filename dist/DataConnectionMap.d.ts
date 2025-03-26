@@ -160,7 +160,7 @@ export type DataConnectionMap<T = unknown> = {
 };
 export type Point = {
     id: number | string;
-    vector: number[];
+    vector: Float32Array;
     payload: unknown;
 };
 export type Payload = {
