@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-03-28
+- added putEntity and re-org ([5427609](https://github.com/mjt-services/data-common-2025/commit/5427609944128c2711d0a3cdd241dd45914d3f5d)) by Matt Taylor
+
 ## 2025-03-26
 - reworked vector search response ([e25e041](https://github.com/mjt-services/data-common-2025/commit/e25e04182357ff93fc20ce30a43b1df7bb5424a9)) by Matt Taylor
 - query fp32array instead of number[] ([d9a25d7](https://github.com/mjt-services/data-common-2025/commit/d9a25d7b4e6d9a97aeeca0a4048f26808c7afc30)) by Matt Taylor
