@@ -1,11 +1,9 @@
-import type { Messages } from "@mjt-engine/message";
-import type { DataConnectionMap } from "./DataConnectionMap";
 import type { MessageConnectionInstance } from "@mjt-engine/message/dist/createConnection";
+import type { DataConnectionMap } from "../DataConnectionMap";
+import { putEntity } from "./putEntity";
 
-type DataConnectionInstance = MessageConnectionInstance<DataConnectionMap>;
-
-export const get =
-  (con: DataConnectionInstance) =>
+const get =
+  <M extends DataConnectionMap>(con: MessageConnectionInstance<M>) =>
   async <T = unknown>(
     body: DataConnectionMap["data.get"]["request"]["body"]
   ) => {
@@ -14,8 +12,8 @@ export const get =
     >;
   };
 
-export const getMany =
-  (con: DataConnectionInstance) =>
+const getMany =
+  <M extends DataConnectionMap>(con: MessageConnectionInstance<M>) =>
   async <T = unknown>(
     body: DataConnectionMap["data.getMany"]["request"]["body"]
   ) => {
@@ -25,22 +23,22 @@ export const getMany =
     }) as Promise<T[]>;
   };
 
-export const put =
-  (con: DataConnectionInstance) =>
+const put =
+  <M extends DataConnectionMap>(con: MessageConnectionInstance<M>) =>
   async (body: DataConnectionMap["data.put"]["request"]["body"]) => {
     return con.request({ subject: "data.put", request: { body } });
   };
 
-export const search =
-  (con: DataConnectionInstance) =>
+const search =
+  <M extends DataConnectionMap>(con: MessageConnectionInstance<M>) =>
   async (body: DataConnectionMap["data.search"]["request"]["body"]) => {
     return con.request({ subject: "data.search", request: { body } });
   };
 
-export const remove =
-  (con: DataConnectionInstance) =>
+const remove =
+  <M extends DataConnectionMap>(con: MessageConnectionInstance<M>) =>
   async (body: DataConnectionMap["data.remove"]["request"]["body"]) => {
     return con.request({ subject: "data.remove", request: { body } });
   };
 
-export const Datas = { put, get, getMany, search, remove };
+export const Datas = { put, get, getMany, search, remove, putEntity };
