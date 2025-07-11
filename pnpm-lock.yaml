@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@mjt-engine/message':
         specifier: github:mjt-engine/message
-        version: https://codeload.github.com/mjt-engine/message/tar.gz/e223c437193b115f1345908d4c68f7662dcf4790(nats.ws@1.30.2)
+        version: https://codeload.github.com/mjt-engine/message/tar.gz/55c2117abd754c2128f7b335a05d49c7d0484e71(nats.ws@1.30.2)
       '@mjt-engine/object':
         specifier: github:mjt-engine/object
         version: https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
@@ -39,9 +39,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/error/tar.gz/9b170db171d86c3a1a0afdc6c7de205259a3b564}
     version: 2025.4.21-1038
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/e223c437193b115f1345908d4c68f7662dcf4790':
-    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/e223c437193b115f1345908d4c68f7662dcf4790}
-    version: 2025.7.11-1714
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/55c2117abd754c2128f7b335a05d49c7d0484e71':
+    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/55c2117abd754c2128f7b335a05d49c7d0484e71}
+    version: 2025.7.11-1723
     peerDependencies:
       nats.ws: ^1.27.0
 
@@ -275,7 +275,7 @@ snapshots:
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/e223c437193b115f1345908d4c68f7662dcf4790(nats.ws@1.30.2)':
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/55c2117abd754c2128f7b335a05d49c7d0484e71(nats.ws@1.30.2)':
     dependencies:
       '@mjt-engine/byte': https://codeload.github.com/mjt-engine/byte/tar.gz/02fcb5bdd8acbb1675c6aa34777955c6d88aa399
       '@mjt-engine/error': https://codeload.github.com/mjt-engine/error/tar.gz/9b170db171d86c3a1a0afdc6c7de205259a3b564
