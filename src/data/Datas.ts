@@ -26,7 +26,7 @@ const getMany =
 const put =
   <M extends DataConnectionMap>(con: MessageConnectionInstance<M>) =>
   async (body: DataConnectionMap["data.put"]["request"]["body"]) => {
-    return con.request({ subject: "data.put", request: { body } });
+    return con.publish({ subject: "data.put", request: { body } });
   };
 
 const search =
