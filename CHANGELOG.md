@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 2025-07-12
+- bump deps ([97db1a6](https://github.com/mjt-services/data-common-2025/commit/97db1a66cfbe0acb49fd4a2e46100fbde1679e7e)) by user
+
 ## 2025-07-11
 - bump deps ([700bd91](https://github.com/mjt-services/data-common-2025/commit/700bd911bb26d6db757b8ffb313f1643b3c5d00b)) by user
 - bump deps ([01589cb](https://github.com/mjt-services/data-common-2025/commit/01589cb79b6eaa85c29ad298d975d537cf0bab17)) by user
