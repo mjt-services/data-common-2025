@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@mjt-engine/message':
         specifier: github:mjt-engine/message
-        version: https://codeload.github.com/mjt-engine/message/tar.gz/9005ee8ae0a398f94c7a2385187cfddb153fdf72
+        version: https://codeload.github.com/mjt-engine/message/tar.gz/f577b88d3859e383ff9d331468fbfbd37d675c6e
       '@mjt-engine/object':
         specifier: github:mjt-engine/object
         version: https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
@@ -39,9 +39,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/error/tar.gz/9b170db171d86c3a1a0afdc6c7de205259a3b564}
     version: 2025.4.21-1038
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/9005ee8ae0a398f94c7a2385187cfddb153fdf72':
-    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/9005ee8ae0a398f94c7a2385187cfddb153fdf72}
-    version: 2025.7.12-1434
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/f577b88d3859e383ff9d331468fbfbd37d675c6e':
+    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/f577b88d3859e383ff9d331468fbfbd37d675c6e}
+    version: 2025.7.12-1459
 
   '@mjt-engine/object@https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428':
     resolution: {tarball: https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428}
@@ -273,7 +273,7 @@ snapshots:
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/9005ee8ae0a398f94c7a2385187cfddb153fdf72':
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/f577b88d3859e383ff9d331468fbfbd37d675c6e':
     dependencies:
       '@mjt-engine/byte': https://codeload.github.com/mjt-engine/byte/tar.gz/02fcb5bdd8acbb1675c6aa34777955c6d88aa399
       '@mjt-engine/error': https://codeload.github.com/mjt-engine/error/tar.gz/9b170db171d86c3a1a0afdc6c7de205259a3b564
