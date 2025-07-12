@@ -9,7 +9,7 @@ const getMany = (con) => async (body) => {
     });
 };
 const put = (con) => async (body) => {
-    return con.publish({ subject: "data.put", request: { body } });
+    return con.request({ subject: "data.put", request: { body } });
 };
 const search = (con) => async (body) => {
     return con.request({ subject: "data.search", request: { body } });
