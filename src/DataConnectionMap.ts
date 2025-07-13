@@ -17,7 +17,43 @@ export type FromUnknownDataQuery = DataQuery & {
   from: unknown;
 };
 
+export type Big = {
+  id: string;
+  parts: string[];
+  byteLength: number;
+};
+
 export type DataConnectionMap<T = unknown> = {
+  "data.putBigPart": {
+    request: {
+      options?: Partial<{}>;
+      body: {
+        objectStore?: ObjectStore<T>;
+        key?: string;
+        value: Uint8Array;
+      };
+    };
+    response: string;
+    headers: {
+      url?: string;
+      authToken?: string;
+    };
+  };
+  "data.putBig": {
+    request: {
+      options?: Partial<{}>;
+      body: {
+        objectStore?: ObjectStore<T>;
+        key?: string;
+        value: Big;
+      };
+    };
+    response: string;
+    headers: {
+      url?: string;
+      authToken?: string;
+    };
+  };
   "data.put": {
     request: {
       options?: Partial<{}>;
@@ -28,6 +64,34 @@ export type DataConnectionMap<T = unknown> = {
       };
     };
     response: string;
+    headers: {
+      url?: string;
+      authToken?: string;
+    };
+  };
+  "data.getBig": {
+    request: {
+      options?: Partial<{}>;
+      body: {
+        objectStore?: ObjectStore<T>;
+        key: string;
+      };
+    };
+    response: Big | undefined;
+    headers: {
+      url?: string;
+      authToken?: string;
+    };
+  };
+  "data.getBigPart": {
+    request: {
+      options?: Partial<{}>;
+      body: {
+        objectStore?: ObjectStore<T>;
+        key: string;
+      };
+    };
+    response: Uint8Array | undefined;
     headers: {
       url?: string;
       authToken?: string;
@@ -78,6 +142,20 @@ export type DataConnectionMap<T = unknown> = {
       body: {
         objectStore?: ObjectStore<T>;
         query: string | string[] | FromObjectStoreDataQuery;
+      };
+    };
+    response: { success: boolean };
+    headers: {
+      url?: string;
+      authToken?: string;
+    };
+  };
+  "data.removeBig": {
+    request: {
+      options?: Partial<{}>;
+      body: {
+        objectStore?: ObjectStore<T>;
+        key: string | string[];
       };
     };
     response: { success: boolean };
